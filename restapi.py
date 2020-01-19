@@ -12,6 +12,7 @@ import pandas as pd
 from bson.json_util import dumps
 from flask import Response
 import settings
+
 #Flask app configuration and database setting
 app = flask.Flask(__name__)
 app.config["DEBUG"] = settings.DEBUG
@@ -55,7 +56,7 @@ def get_employees():
         cur.close()
         
         #Return response
-        response = Response(dumps(employees), status=200, mimetype='application/json')
+        response = Response(dumps({"employees" : employees}), status=200, mimetype='application/json')
         
     except Exception as error:
         #Response on error
