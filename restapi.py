@@ -12,6 +12,7 @@ import pandas as pd
 from bson.json_util import dumps
 from flask import Response
 import settings
+
 #Flask app configuration and database setting
 app = flask.Flask(__name__)
 app.config["DEBUG"] = settings.DEBUG
