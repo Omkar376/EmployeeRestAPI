@@ -1,8 +1,10 @@
 REST API using Flask Framework
 Step 1:
      pip install requirements.txt
+
 Step 2:
      Prepare and insert data into MySQL DB using file insertdata.py
+
 Step 3:
      Run restapi.py python file
 
