@@ -17,7 +17,7 @@ RAW_SQL_QUERY = """SELECT RowNumber, `Employee Code`, Department, Score, `Date C
                     FROM (select @c:= -0.25) initvars, employee t
                     WHERE Department != "Waltzz" and DATE(`Date Created`) < now() - interval 14 DAY
                     order by Score DESC ) AS T
-                    union all
+                    union
                     SELECT floor(@n := @n + 0.5) RowNumber, t.*, 2 Casetype
                     FROM (select @n:= -0.5) initvars, employee t
                     WHERE Department = "Waltzz" and DATE(`Date Created`) < now() - interval 14 DAY
